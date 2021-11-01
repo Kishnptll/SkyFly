@@ -6,15 +6,15 @@ var myScore;
 function startGame() {
     myGamePiece = new component(30, 10, "blue", 10, 100);
     myGamePiece.gravity = 0.05;
-    myScore = new component("30px", "Consolas", "black", 520, 40, "text");
+    myScore = new component("30px", "Consolas", "black", 420, 40, "text");
     myGameArea.start();
 }
 
 var myGameArea = {
     canvas: document.createElement("canvas"),
     start: function () {
-        this.canvas.width = 750;
-        this.canvas.height = 400;
+        this.canvas.width = 650;
+        this.canvas.height = 350;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
